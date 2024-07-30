@@ -1,0 +1,155 @@
+* {
+    background-color: #fafafa;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Reset basic styles */
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    box-sizing: border-box; /* Ensure padding and border are included in element's total width and height */
+}
+
+/* Container to hold navbar and content */
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+/* Navbar styles */
+.navbar {
+    max-width: 1200px; /* Maximum width for the navbar */
+
+    margin: 0 auto; /* Centering the navbar */
+    padding: 20px 20px; /* Padding for the navbar */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2vh; /* 15% of the viewport height */
+    
+}
+
+nav {
+    display: flex;
+    justify-content: center; /* Center the nav items horizontally */
+}
+
+.nav-links {
+    list-style: none; /* Remove bullet points */
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 15px; /* Spacing between nav items */
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333; /* Dark gray text */
+    font-weight: 500; /* Medium weight for better readability */
+    font-size: 16px; /* Font size */
+    transition: color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.nav-links a:hover {
+    color: #007BFF; /* Blue color on hover */
+    font-weight: 600; /* Slightly bolder on hover, optional */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .nav-links li {
+        margin: 10px 0;
+    }
+}
+
+/* SECTION 1 SECTION 1  SECTION 1  SECTION 1  SECTION 1  SECTION 1  SECTION 1  SECTION 1  SECTION 1  SECTION 1  SECTION 1  SECTION 1   */
+
+
+.contenedor-1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 85vh; /* 85% of the viewport height */
+    padding: 20px;
+    box-sizing: border-box;
+    flex: 1;
+    
+    
+}
+
+.contenedor-cosas {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    color: #666666;
+}
+
+.texto-introductorio h1 {
+    color: black;
+    font-size: 3rem;
+    font-weight: 700;
+    margin: 10px 0;
+    position: relative;
+    overflow: hidden; /* Hide overflowing content */
+    height: 1.2em; /* Adjust based on font size */
+}
+
+.texto-introductorio h1 span {
+    display: block;
+    position: absolute;
+    width: 100%;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.texto-introductorio h1 .current {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.texto-introductorio h1 .next {
+    transform: translateY(100%);
+    opacity: 0;
+}
+
+.texto-introductorio h3 {
+    font-size: 1.25rem; /* Adjust font size as needed */
+    font-weight: 500; /* Medium weight */
+    margin: 10px 0; /* Add some space above and below */
+}
+
+.texto-introductorio p {
+    font-size: 1rem; /* Adjust font size as needed */
+    margin: 10px 0; /* Add some space above and below */
+}
+
+.imagen-principal {
+    max-width: 30%; /* Adjusted width */
+    display: flex;
+    justify-content: center;
+    overflow: hidden; /* To crop the image */
+    border-radius: 6%; /* Optional: make the image round */
+}
+
+.imagen-principal img {
+    max-width: 100%;
+    height: auto;
+    transform-origin: 83%;
+    transform: scale(1.35); /* Default scale */
+    transition: transform 0.3s ease;
+}
+
+.imagen-principal img:hover {
+    transform: scale(1.45);
+}
