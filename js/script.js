@@ -20,10 +20,10 @@ document.addEventListener('DOMContentLoaded', function() {
             nextText.classList.remove('next');
             nextText.classList.add('current');
             rotatingText.removeChild(currentText);
-        }, 10); // Small delay to ensure the nextText is appended before the animation
+        }, 10);
 
         currentIndex = (currentIndex + 1) % textArray.length;
     }
 
-    setInterval(changeText, 2500); // Change text every 2 seconds
+    setInterval(changeText, 2500);
 });

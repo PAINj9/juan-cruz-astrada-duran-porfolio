@@ -1,66 +1,60 @@
 * {
-    background-color: #fafafa;
+    
     font-family: 'Inter', sans-serif;
 }
 
-/* Reset basic styles */
 html, body {
     height: 100%;
     margin: 0;
     font-family: 'Inter', sans-serif;
-    box-sizing: border-box; /* Ensure padding and border are included in element's total width and height */
+    box-sizing: border-box;
 }
 
-/* Container to hold navbar and content */
 body {
     display: flex;
     flex-direction: column;
     height: 100vh;
 }
 
-/* Navbar styles */
 .navbar {
-    max-width: 1200px; /* Maximum width for the navbar */
-
-    margin: 0 auto; /* Centering the navbar */
-    padding: 20px 20px; /* Padding for the navbar */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 20px;
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 2vh; /* 15% of the viewport height */
-    
+    height: 10vh;
 }
 
 nav {
     display: flex;
-    justify-content: center; /* Center the nav items horizontally */
+    justify-content: center;
 }
 
 .nav-links {
-    list-style: none; /* Remove bullet points */
+    list-style: none;
     margin: 0;
     padding: 0;
     display: flex;
 }
 
 .nav-links li {
-    margin: 0 15px; /* Spacing between nav items */
+    margin: 0 15px;
 }
 
 .nav-links a {
     text-decoration: none;
-    color: #333; /* Dark gray text */
-    font-weight: 500; /* Medium weight for better readability */
-    font-size: 16px; /* Font size */
-    transition: color 0.3s ease; /* Smooth transition for hover effect */
+    color: #333;
+    font-weight: 500;
+    font-size: 16px;
+    transition: color 0.3s ease;
 }
 
 .nav-links a:hover {
-    color: #007BFF; /* Blue color on hover */
-    font-weight: 600; /* Slightly bolder on hover, optional */
+    color: #007BFF;
+    font-weight: 600;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
     .nav-links {
         flex-direction: column;
@@ -72,38 +66,35 @@ nav {
     }
 }
 
-/* SECTION 1 SECTION 1  SECTION 1  SECTION 1  SECTION 1  SECTION 1  SECTION 1  SECTION 1  SECTION 1  SECTION 1  SECTION 1  SECTION 1   */
-
-
 .contenedor-1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 85vh; /* 85% of the viewport height */
+    height: 85vh;
     padding: 20px;
     box-sizing: border-box;
     flex: 1;
-    
-    
 }
 
-.contenedor-cosas {
+.contenedor-contenido {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
     max-width: 1200px;
     color: #666666;
+    margin: 20px 0; /* Añadido margen superior e inferior */
 }
 
 .texto-introductorio h1 {
     color: black;
     font-size: 3rem;
     font-weight: 700;
-    margin: 10px 0;
+    margin: 40px 0; /* Ajuste del margen */
     position: relative;
-    overflow: hidden; /* Hide overflowing content */
-    height: 1.2em; /* Adjust based on font size */
+    overflow: hidden;
+    height: 1.2em;
+    margin-top: 40px;
 }
 
 .texto-introductorio h1 span {
@@ -123,33 +114,92 @@ nav {
     opacity: 0;
 }
 
-.texto-introductorio h3 {
-    font-size: 1.25rem; /* Adjust font size as needed */
-    font-weight: 500; /* Medium weight */
-    margin: 10px 0; /* Add some space above and below */
-}
-
 .texto-introductorio p {
-    font-size: 1rem; /* Adjust font size as needed */
-    margin: 10px 0; /* Add some space above and below */
+    font-size: 1rem;
+    margin: 60px 0; /* Ajuste del margen */
 }
 
 .imagen-principal {
-    max-width: 30%; /* Adjusted width */
+    max-width: 30%;
     display: flex;
     justify-content: center;
-    overflow: hidden; /* To crop the image */
-    border-radius: 6%; /* Optional: make the image round */
+    overflow: hidden;
+    border-radius: 6%;
+    margin: 40px; /* Añadido margen */
 }
 
 .imagen-principal img {
     max-width: 100%;
     height: auto;
     transform-origin: 83%;
-    transform: scale(1.35); /* Default scale */
+    transform: scale(1.35);
     transition: transform 0.3s ease;
 }
 
 .imagen-principal img:hover {
     transform: scale(1.45);
 }
+
+
+button {
+    background: transparent;
+    position: relative;
+    padding: 5px 15px;
+    display: flex;
+    align-items: center;
+    font-size: 17px;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    border: 1px solid rgb(40, 144, 241);
+    outline: none;
+    overflow: hidden;
+    color: rgb(40, 144, 241);
+    transition: color 0.3s 0.1s ease-out;
+    text-align: center;
+  }
+  
+  button span {
+    margin: 10px;
+  }
+  
+  button::before {
+    position: absolute;
+    top: 250%;
+    left: -150%;
+    width: 290%;
+    height: 400%;
+    content: '';
+    background-color: rgb(40, 144, 241);
+    transform: rotate(45deg);
+    transition: top 0.5s ease-out, left 0.5s ease-out;
+    z-index: -1;
+  }
+  
+  button:hover {
+    color: #fff;
+    border: 1px solid rgb(40, 144, 241);
+  }
+  
+  button:hover::before {
+    top: -50%;
+    left: -50%;
+  }
+
+  .boton-instagram{
+    
+  }
+
+  .boton-github{
+
+  }
+
+  .boton-cv{
+
+  }
+  
+  .botones-ordenados {
+    display: flex;
+    flex-direction: row; /* Cambiado a fila */
+    gap: 10px; /* Espacio entre los botones */
+  }
