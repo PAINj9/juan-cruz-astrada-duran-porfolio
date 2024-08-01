@@ -139,6 +139,7 @@ nav {
     overflow: hidden;
     border-radius: 6%;
     margin: 40px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra alrededor de la imagen */
 }
 
 .imagen-principal img {
@@ -152,6 +153,7 @@ nav {
 .imagen-principal img:hover {
     transform: scale(1.45);
 }
+
 
 button {
     background: transparent;
