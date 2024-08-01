@@ -1,6 +1,6 @@
 * {
-    
     font-family: 'Inter', sans-serif;
+    scroll-behavior: smooth;
 }
 
 html, body {
@@ -8,6 +8,7 @@ html, body {
     margin: 0;
     font-family: 'Inter', sans-serif;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -16,6 +17,8 @@ body {
     height: 100vh;
 }
 
+/* -------------- Navbar -------------- */
+
 .navbar {
     max-width: 1200px;
     margin: 0 auto;
@@ -23,7 +26,15 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 10vh;
+    height: 3vh;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    width: 100%;
+    background-color: #fff;
+    z-index: 1000;
+    opacity: 50%;
 }
 
 nav {
@@ -66,11 +77,13 @@ nav {
     }
 }
 
+/* -------------- Section 1 -------------- */
+
 .contenedor-1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 85vh;
+    height: 100vh;
     padding: 20px;
     box-sizing: border-box;
     flex: 1;
@@ -83,14 +96,14 @@ nav {
     width: 100%;
     max-width: 1200px;
     color: #666666;
-    margin: 20px 0; /* Añadido margen superior e inferior */
+    margin: 20px 0;
 }
 
 .texto-introductorio h1 {
     color: black;
     font-size: 3rem;
     font-weight: 700;
-    margin: 40px 0; /* Ajuste del margen */
+    margin: 40px 0;
     position: relative;
     overflow: hidden;
     height: 1.2em;
@@ -116,7 +129,7 @@ nav {
 
 .texto-introductorio p {
     font-size: 1rem;
-    margin: 60px 0; /* Ajuste del margen */
+    margin: 60px 0;
 }
 
 .imagen-principal {
@@ -125,7 +138,7 @@ nav {
     justify-content: center;
     overflow: hidden;
     border-radius: 6%;
-    margin: 40px; /* Añadido margen */
+    margin: 40px;
 }
 
 .imagen-principal img {
@@ -139,7 +152,6 @@ nav {
 .imagen-principal img:hover {
     transform: scale(1.45);
 }
-
 
 button {
     background: transparent;
@@ -157,13 +169,13 @@ button {
     color: rgb(40, 144, 241);
     transition: color 0.3s 0.1s ease-out;
     text-align: center;
-  }
-  
-  button span {
+}
+
+button span {
     margin: 10px;
-  }
-  
-  button::before {
+}
+
+button::before {
     position: absolute;
     top: 250%;
     left: -150%;
@@ -174,32 +186,95 @@ button {
     transform: rotate(45deg);
     transition: top 0.5s ease-out, left 0.5s ease-out;
     z-index: -1;
-  }
-  
-  button:hover {
+}
+
+button:hover {
     color: #fff;
     border: 1px solid rgb(40, 144, 241);
-  }
-  
-  button:hover::before {
+}
+
+button:hover::before {
     top: -50%;
     left: -50%;
-  }
+}
 
-  .boton-instagram{
-    
-  }
+.boton-youtube { }
 
-  .boton-github{
+.boton-github { }
 
-  }
+.boton-cv { }
 
-  .boton-cv{
-
-  }
-  
-  .botones-ordenados {
+.botones-ordenados {
     display: flex;
-    flex-direction: row; /* Cambiado a fila */
-    gap: 10px; /* Espacio entre los botones */
-  }
+    flex-direction: row;
+    gap: 10px;
+}
+
+.no-underline {
+    text-decoration: none;
+}
+
+.no-underline:hover {
+    text-decoration: none;
+}
+
+/* -------------- Section 2 -------------- */
+
+.contenedor-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    min-height: 100vh;
+}
+
+.contenedor-contenido2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 1500px;
+}
+
+.card {
+    margin-bottom: 20px;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 20px;
+    padding: 35px;
+    background-color: rgba(255, 255, 255, 0.45);
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(15px);
+}
+
+.card h1 {
+    text-align: center;
+}
+
+.card p {
+    text-align: center;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    width: 100%;
+}
+
+.skill-item {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+.skill-item img {
+    margin-right: 10px;
+}
+
+.skill-item p {
+    margin: 0;
+}
