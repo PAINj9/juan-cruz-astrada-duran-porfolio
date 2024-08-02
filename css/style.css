@@ -229,6 +229,7 @@ button:hover::before {
     justify-content: center; /* Añadido */
     box-sizing: border-box;
     min-height: 100vh;
+    margin-top: 20px;
 }
 
 .contenedor-contenido2 {
@@ -298,3 +299,5 @@ p {
 .skill-item p {
     margin: 0;
 }
+
+/* -------------- Section 3 -------------- */
