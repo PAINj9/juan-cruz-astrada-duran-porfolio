@@ -262,9 +262,11 @@ button:hover::before {
 
 .skills-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+    grid-template-columns: repeat(3, 1fr); /* Tres columnas de igual tamaño */
+    column-gap: 200px; /* Ajusta este valor para aumentar el espacio horizontal */
+    row-gap: 20px; /* Mantén el espacio vertical constante */
     width: 100%;
+    text-align: center;
 }
 
 .skill-item {
