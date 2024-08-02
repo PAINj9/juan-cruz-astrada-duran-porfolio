@@ -226,7 +226,7 @@ button:hover::before {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 20px;
+    padding-top: 120px;
     box-sizing: border-box;
     min-height: 100vh;
 }
@@ -240,20 +240,28 @@ button:hover::before {
 }
 
 .card {
-    margin-bottom: 20px;
-    width: 80%;
-    display: flex;
+    margin-bottom: 30px;
+    width: 80%;    display: flex;
     flex-direction: column;
     align-items: center;
     border-radius: 20px;
-    padding: 35px;
+    padding: 5px;
     background-color: rgba(255, 255, 255, 0.45);
-    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.25);
     backdrop-filter: blur(15px);
+}
+
+.h1 {
+    margin-bottom: 0px;
+}
+
+p {
+    margin-top: -5px; /* Reducir el margen superior del párrafo */
 }
 
 .card h1 {
     text-align: center;
+    
 }
 
 .card p {
@@ -263,10 +271,12 @@ button:hover::before {
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* Tres columnas de igual tamaño */
-    column-gap: 200px; /* Ajusta este valor para aumentar el espacio horizontal */
+    column-gap: 250px; /* Ajusta este valor para aumentar el espacio horizontal */
     row-gap: 20px; /* Mantén el espacio vertical constante */
     width: 100%;
     text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 .skill-item {
