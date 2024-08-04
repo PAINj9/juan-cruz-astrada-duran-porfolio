@@ -302,4 +302,77 @@ p {
     margin: 0;
 }
 
+
+
 /* -------------- Section 3 -------------- */
+
+.contenedor-3 {
+ 
+    height: 100vh;
+   
+}
+
+/* -------------- Section 3 -------------- */
+
+#section-carousel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel {
+    display: flex;
+    width: 100%;  /* Aumenta el ancho del carrusel */
+    max-width: 1500px;  /* Ajusta el ancho máximo según tus necesidades */
+    height: 600px;  /* Ajusta la altura del carrusel */
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    height: 100%;  /* Asegura que los elementos internos ocupen toda la altura */
+}
+
+.carousel-item {
+    display: flex;
+    min-width: 100%;
+    box-sizing: border-box;
+    padding: 20px;
+    height: 100%;  /* Asegura que los elementos ocupen toda la altura */
+}
+
+.carousel-item img {
+    width: 60%;  /* Ajusta el ancho de las imágenes */
+    height: auto;  /* Mantén la proporción de las imágenes */
+    border-radius: 10px;
+}
+
+.carousel-content {
+    padding: 20px;
+    width: 40%;  /* Ajusta el ancho del contenido */
+}
+
+.carousel-content h2 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.carousel-content p {
+    margin: 10px 0 0;
+    font-size: 16px;
+}
+
+.carousel-nav {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+
