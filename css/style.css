@@ -320,10 +320,31 @@ p {
     align-items: center;
 }
 
+.carousel-container {
+    width: 90%;
+    max-width: 1500px;
+    text-align: center;
+}
+
+.carousel-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.carousel-header h2 {
+    font-size: 24px;
+    margin-top: 0;
+}
+
+.carousel-header p {
+    font-size: 18px;
+    margin: 5px 0 0;
+    
+}
+
 .carousel {
     display: flex;
     width: 100%;  /* Aumenta el ancho del carrusel */
-    max-width: 1500px;  /* Ajusta el ancho máximo según tus necesidades */
     height: 600px;  /* Ajusta la altura del carrusel */
     overflow: hidden;
     border-radius: 15px;
@@ -375,4 +396,26 @@ p {
     transform: translateY(-50%);
 }
 
+.carousel-nav button {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #666;
+    padding: 0 20px;
+    transition: color 0.3s;
+}
 
+.carousel-nav button:hover {
+    color: #333;
+}
+
+.carousel-description {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.carousel-description p {
+    font-size: 16px;
+    margin: 0;
+}
