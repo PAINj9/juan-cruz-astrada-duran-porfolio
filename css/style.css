@@ -73,7 +73,7 @@ nav {
         flex-direction: column;
         align-items: center;
     }
-    
+
     .nav-links li {
         margin: 10px 0;
     }
@@ -316,7 +316,7 @@ p {
 .contenedor-3 {
 
     height: 100vh;
-   
+
 }
 
 .carousel-container {
@@ -436,19 +436,21 @@ p {
 
 
 
-
-
 #section-testimonials {
+
+    justify-content: flex-start; /* Alinea al principio (arriba) */
+
+
     display: flex;
     justify-content: center;
     align-items: center;
-    
+
 }
 
 .contenedor-4 {
 
     height: 100vh;
-   
+
 }
 
 /* New Card Styles */
@@ -464,9 +466,9 @@ p {
     margin: 60px;
     width: 360px;
     height: 60vh;
-    
-    
-    
+
+
+
 }
 
 .new-try, .new-lokomotion, .new-gonzo {
@@ -479,7 +481,7 @@ p {
     align-items: flex-end;
     justify-content: center;
     box-sizing: border-box;
-    
+
 }
 
 .new-try img, .new-lokomotion img, .new-gonzo img {
