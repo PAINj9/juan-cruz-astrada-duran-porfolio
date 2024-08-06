@@ -311,13 +311,10 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.contenedor-3 {
-
     height: 100vh;
-   
 }
+
+
 
 .carousel-container {
     width: 90%;
