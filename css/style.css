@@ -208,10 +208,13 @@ button:hover::before {
 
 .boton-cv { }
 
-.botones-ordenados {
+
+
+.botones-ordenados-inicio {
     display: flex;
-    flex-direction: row;
-    gap: 10px;
+    gap: 1rem; /* Espacio entre los botones */
+    justify-content: left; /* Centra los botones horizontalmente */
+    flex-wrap: wrap; /* Permite que los botones se ajusten si no caben en una fila */
 }
 
 .no-underline {
@@ -550,6 +553,7 @@ p {
     padding: 20px; /* Espacio adicional para evitar que el contenido se pegue a los bordes */
 }
 
+
 .contact-titulo {
     margin-bottom: 2rem; /* Espacio entre el título y el contenido */
     width: 100%; /* Ocupa todo el ancho del contenedor */
@@ -560,6 +564,7 @@ p {
 }
 
 .contact-container {
+    width: 30%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -568,6 +573,17 @@ p {
 
 .textos-contact {
     margin-bottom: 2rem; /* Espacio entre los textos y los botones */
+    width: 100%;
+    
+}
+
+.textos-contact h2 {
+    font-size: 48px;
+}
+
+.textos-contact h4 {
+    font-size: 20px;
+    width: 100%;
 }
 
 .botones-ordenados {
