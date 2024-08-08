@@ -541,7 +541,7 @@ p {
 /* -------------- Section 5 -------------- */
 
 #section-contact {
-    height: 70vh; /* Mantén la altura de la sección */
+    height: 60vh; /* Mantén la altura de la sección */
     display: flex;
     flex-direction: column;
     justify-content: center; /* Centra verticalmente */
@@ -601,7 +601,7 @@ ul {
 
 .footer {
     background-color: #24262b;
-    padding: 70px 0;
+    padding: 40px 0;
     width: 100%; /* Asegura que el footer ocupe todo el ancho del contenedor */
 }
 
