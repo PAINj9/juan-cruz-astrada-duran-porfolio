@@ -59,3 +59,28 @@ function prevSlide() {
 }
 
 showSlide(currentSlide);
+
+let skillSlideIndex = 0;
+
+function showSkillSlides() {
+    const slides = document.querySelectorAll('#skills-carousel .carousel-item');
+    const totalSlides = slides.length;
+    
+    if (skillSlideIndex >= totalSlides) skillSlideIndex = 0;
+    if (skillSlideIndex < 0) skillSlideIndex = totalSlides - 1;
+    
+    const carouselInner = document.getElementById('skills-carousel');
+    carouselInner.style.transform = `translateX(${-skillSlideIndex * 100}%)`;
+}
+
+function nextSkillSlide() {
+    skillSlideIndex++;
+    showSkillSlides();
+}
+
+function prevSkillSlide() {
+    skillSlideIndex--;
+    showSkillSlides();
+}
+
+showSkillSlides();

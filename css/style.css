@@ -225,64 +225,38 @@ button:hover::before {
     text-decoration: none;
 }
 
-/* -------------- Section 2 -------------- */
 
-.contenedor-2 {
+/* -------------- Section 2  -------------- */
+
+#section-skills {
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    justify-content: center; /* Añadido */
-    box-sizing: border-box;
-    min-height: 100vh;
-    margin-top: 20px;
+    height: 100vh;
+    max-width: 1400px;
+    margin: 0 auto; /* Centra horizontalmente en su contenedor */
+    flex-direction: column; /* Asegura que el contenido se apile verticalmente si es necesario */
+    text-align: center; /* Alinea el texto al centro */
 }
 
-.contenedor-contenido2 {
+
+.carousel {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    max-width: 1500px;
-}
-
-.card {
-    margin-bottom: 30px;
-    width: 80%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border-radius: 20px;
-    padding: 5px;
-    background-color: rgba(255, 255, 255, 0.45);
-    box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.25);
-    backdrop-filter: blur(15px);
-}
-
-.h1 {
-    margin-bottom: 0px;
-}
-
-p {
-    margin-top: -5px; /* Reducir el margen superior del párrafo */
-}
-
-.card h1 {
-    text-align: center;
-}
-
-.card p {
-    text-align: center;
+    width: 20%;  /* Aumenta el ancho del carrusel */
+    height: 600px;  /* Ajusta la altura del carrusel */
+    overflow: hidden;
+    border-radius: 15px;
+    position: relative;
 }
 
 .skills-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Tres columnas de igual tamaño */
-    column-gap: 250px; /* Ajusta este valor para aumentar el espacio horizontal */
-    row-gap: 20px; /* Mantén el espacio vertical constante */
-    width: 100%;
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas */
+    grid-template-rows: repeat(3, auto);   /* 3 filas */
+    gap: 80px;
+    width: 20%;
     text-align: center;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    justify-items: left; /* Alinea los íconos al centro */
 }
 
 .skill-item {
@@ -293,17 +267,41 @@ p {
 }
 
 .skill-item:hover {
-    transform: scale(1.2); /* Aplica el zoom a todo el contenedor */
-    transition: transform 0.1s ease-in-out; /* Añade una transición suave */
+    transform: scale(1.2);
 }
 
 .skill-item img {
     margin-right: 10px;
+    width: 54px !important;  /* Forzamos el ancho del ícono */
+    height: 54px !important; /* Forzamos la altura del ícono */
+    max-width: 44px; /* Limita el tamaño máximo */
+    max-height: 44px; /* Limita el tamaño máximo */
 }
 
-.skill-item p {
-    margin: 0;
+
+.carousel-nav {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
 }
+
+.carousel-nav button {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #666;
+    padding: 0 20px;
+    transition: color 0.3s;
+}
+
+.carousel-nav button:hover {
+    color: #333;
+}
+
 
 
 
