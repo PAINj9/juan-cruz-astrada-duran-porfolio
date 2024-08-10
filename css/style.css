@@ -1,5 +1,6 @@
 * {
     font-family: 'Inter', sans-serif;
+    
 }
 
 html {
@@ -34,10 +35,13 @@ body {
     right: 0;
     top: 0;
     width: 100%;
-    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.8); /* Cambiado a rgba para tener transparencia */
     z-index: 1000;
-    opacity: 80%;
+    backdrop-filter: blur(5px); /* Aplica el desenfoque a lo que está debajo de la navbar */
+    opacity: 100;
 }
+
+
 
 nav {
     display: flex;
@@ -89,6 +93,7 @@ nav {
     padding: 20px;
     box-sizing: border-box;
     flex: 1;
+    color: #333;
 }
 
 .contenedor-contenido {
@@ -229,6 +234,7 @@ button:hover::before {
 /* -------------- Section 2  -------------- */
 
 #section-skills {
+    
     display: flex;
     justify-content: center;
     align-items: center;
