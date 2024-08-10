@@ -308,6 +308,18 @@ button:hover::before {
     color: #333;
 }
 
+.ml12 {
+    font-weight: 200;
+    font-size: 1.8em;
+    text-transform: uppercase;
+    letter-spacing: 0.5em;
+  }
+  
+  .ml12 .letter {
+    display: inline-block;
+    line-height: 1em;
+  }
+
 
 
 
@@ -596,6 +608,11 @@ button:hover::before {
     justify-content: center; /* Centra los botones horizontalmente */
     flex-wrap: wrap; /* Permite que los botones se ajusten si no caben en una fila */
 }
+
+.ml3 {
+    font-weight: 900;
+    font-size: 3.5em;
+  }
 
 /* -------------- FOOTERS -------------- */
 
