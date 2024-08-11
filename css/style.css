@@ -3,17 +3,20 @@
     
 }
 
+
 html, body {
     scroll-behavior: smooth;
     height: 100%;
-    width: 100%;
     margin: 0;
     font-family: 'Inter', sans-serif;
     box-sizing: border-box;
-    padding: 0;
 }
 
-
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
 
 /* -------------- Navbar -------------- */
 
@@ -95,8 +98,8 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 60%;
-    width: 60%;
+    height: 62%;
+    width: 100%;
     max-width: 1200px;
     color: #666666;
     margin: 20px 0;
@@ -132,12 +135,12 @@ nav {
 
 .texto-introductorio p {
     font-size: 1rem;
-    margin: 53px 0;
-    line-height: 1.8; /* También puedes ajustar la altura de línea para mejorar la legibilidad */
+    margin: 60px 0;
+    line-height: 2; 
 }
 
 .imagen-principal {
-    max-width: 35%;
+    max-width: 36%;
     display: flex;
     justify-content: center;
     overflow: hidden;
@@ -231,23 +234,24 @@ button:hover::before {
 /* -------------- Section 2  -------------- */
 
 #section-skills {
+    
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh; /* Ocupa todo el alto del viewport */
-    width: 100vw; /* Ocupa todo el ancho del viewport */
-    margin: 0;
-    padding: 0;
-    flex-direction: column;
-    text-align: center;
+    height: 100vh;
+    max-width: 1400px;
+    margin: 0 auto; /* Centra horizontalmente en su contenedor */
+    flex-direction: column; /* Asegura que el contenido se apile verticalmente si es necesario */
+    text-align: center; /* Alinea el texto al centro */
 }
+
 
 .carousel {
     display: flex;
-    width: 100vw;  /* Asegura que el carrusel ocupe todo el ancho del viewport */
-    height: 100vh;  /* Asegura que el carrusel ocupe todo el alto del viewport */
+    width: 20%;  /* Aumenta el ancho del carrusel */
+    height: 600px;  /* Ajusta la altura del carrusel */
     overflow: hidden;
-    border-radius: 0; /* Elimina el border-radius para que ocupe todo el viewport */
+    border-radius: 15px;
     position: relative;
 }
 
@@ -256,7 +260,7 @@ button:hover::before {
     grid-template-columns: repeat(2, 1fr); /* 2 columnas */
     grid-template-rows: repeat(3, auto);   /* 3 filas */
     gap: 80px;
-    width: 100%;
+    width: 20%;
     text-align: center;
     justify-items: left; /* Alinea los íconos al centro */
 }
@@ -280,9 +284,10 @@ button:hover::before {
     max-height: 44px; /* Limita el tamaño máximo */
 }
 
+
 .carousel-nav {
     position: absolute;
-    top: 50%; /* Cambiado para centrar los botones verticalmente */
+    top: 50%;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -308,12 +313,12 @@ button:hover::before {
     font-size: 1.8em;
     text-transform: uppercase;
     letter-spacing: 0.5em;
-}
-
-.ml12 .letter {
+  }
+  
+  .ml12 .letter {
     display: inline-block;
     line-height: 1em;
-}
+  }
 
 
 
