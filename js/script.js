@@ -73,6 +73,7 @@ function showSkillSlides() {
     carouselInner.style.transform = `translateX(${-skillSlideIndex * 100}%)`;
 }
 
+
 function nextSkillSlide() {
     skillSlideIndex++;
     showSkillSlides();
