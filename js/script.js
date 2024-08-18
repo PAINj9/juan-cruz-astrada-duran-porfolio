@@ -63,7 +63,7 @@ showSlide(currentSlide);
 let skillSlideIndex = 0;
 
 function showSkillSlides() {
-    const slides = document.querySelectorAll('#skills-carousel .carousel-item');
+    const slides = document.querySelectorAll('#skills-carousel .carousel1-item');
     const totalSlides = slides.length;
     
     if (skillSlideIndex >= totalSlides) skillSlideIndex = 0;
