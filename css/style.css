@@ -353,7 +353,6 @@ button:hover::before {
 
 
 .skills-grid {
-    background-color: rgba(0, 0, 255, 0.233);
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* 2 columnas */
     grid-template-rows: repeat(3, auto);   /* 3 filas, con alturas iguales */
