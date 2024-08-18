@@ -285,7 +285,7 @@ button:hover::before {
     display: flex;
     min-width: 100%;
     box-sizing: border-box;
-    padding: 20px;
+    padding: 10px;
     height: 100%;  /* Asegura que los elementos ocupen toda la altura */
     align-items: center;
 }
@@ -305,7 +305,7 @@ button:hover::before {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    text-align: left; /* Alinea el texto a la izquierda */
+    text-align: center; /* Alinea el texto a la izquierda */
 }
 
 .carousel1-content h2 {
@@ -367,9 +367,11 @@ button:hover::before {
 
 .skill-item {
     display: flex;
-    align-items: center;
-    justify-content: start;
+    flex-direction: column; /* Coloca el texto debajo del ícono */
+    align-items: center; /* Centra el contenido horizontalmente */
+    justify-content: center;
     transition: transform 0.3s ease-in-out;
+    text-align: center; /* Asegura que el texto esté centrado debajo del ícono */
 }
 
 .skill-item:hover {
@@ -377,15 +379,15 @@ button:hover::before {
 }
 
 .skill-item img {
-    margin-right: 10px;
-    width: 54px !important;  /* Forzamos el ancho del ícono */
-    height: 54px !important; /* Forzamos la altura del ícono */
-    max-width: 44px; /* Limita el tamaño máximo */
-    max-height: 44px; /* Limita el tamaño máximo */
+    margin: 0 0 -2px 0; /* Añade un margen inferior para separar el ícono del texto */
+    width: 44px !important;  /* Forzamos el ancho del ícono */
+    height: 44px !important; /* Forzamos la altura del ícono */
+
 }
 
 
 .ml12 {
+    width: 100%;
     padding-left: 60px;
     font-weight: 250;
     font-size: 1.5em;
