@@ -391,14 +391,18 @@ button:hover::before {
     font-weight: 250;
     font-size: 1.5em;
     text-transform: uppercase;
-    letter-spacing: 0.5em;
+    letter-spacing: 0.51em;
   }
   
   .ml12 .letter {
     display: inline-block;
     line-height: 1em;
+    
+    float: none; /* Evita que las letras se apilen verticalmente */
+
   }
 
+ 
 
 
 
@@ -412,12 +416,11 @@ button:hover::before {
     height: 100vh;
 }
 
-
-
 .carousel-container {
     width: 90%;
     max-width: 1500px;
     text-align: center;
+    padding-top: 5%;
 }
 
 .carousel-header {
@@ -521,7 +524,11 @@ button:hover::before {
     margin: 0;
 }
 
-
+.projects {
+    padding-bottom: 1rem;
+    text-align: center;
+    justify-content: center;
+  }
 
 
 
@@ -538,9 +545,8 @@ button:hover::before {
 }
 
 .testimonials-text {
-    padding-top: 100px;
-    margin-bottom: 2rem; /* Espacio entre el texto y las tarjetas */
-    width: 100%; /* Ocupa todo el ancho del contenedor */
+    
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -548,11 +554,15 @@ button:hover::before {
 }
 
 .testimonials-container {
+
+   
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap; /* Permite que las tarjetas se envuelvan */
 }
+
+
 
 /* New Card Styles */
 .new-card {
@@ -566,6 +576,12 @@ button:hover::before {
     margin: 20px; /* Reducido para más espacio entre tarjetas */
     width: 360px;
     height: 60vh;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Agrega animación suave */
+}
+
+.new-card:hover {
+    transform: translateY(-10px); /* Desplaza la tarjeta ligeramente hacia arriba */
+    box-shadow: 0px 2rem 2rem rgba(0, 0, 0, 0.5); /* Aumenta la sombra para darle más énfasis */
 }
 
 .new-try, .new-lokomotion, .new-gonzo {
@@ -590,19 +606,19 @@ button:hover::before {
 }
 
 .new-try img:hover, .new-lokomotion img:hover, .new-gonzo img:hover {
-    transform: translateY(50%) scale(1.1);
+    transform: translateY(50%) scale(1.1); /* Escala la imagen cuando se pasa el cursor por encima */
 }
 
 .new-gonzo {
-    background-image: url("/images/fg.png");
+    background-image: url("../images/fg.png");
 }
 
 .new-lokomotion {
-    background-image: url("/images/fluxo.png");
+    background-image: url("../images/fluxo.png");
 }
 
 .new-try {
-    background-image: url("/images/imperial.jpg");
+    background-image: url("../images/imperial.jpg");
 }
 
 .new-menu {
@@ -636,6 +652,25 @@ button:hover::before {
     line-height: 25px;
 }
 
+.ml7 {
+    margin-top: 8rem; /* Ajuste para reducir espacio arriba */
+    position: relative;
+    font-weight: 300;
+    font-size: 3.7em;
+}
+
+.ml7 .text-wrapper {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+}
+
+.ml7 .letter {
+    transform-origin: 0 100%;
+    display: inline-block;
+    line-height: 1em;
+}
+
 /* -------------- Section 5 -------------- */
 
 #section-contact {
@@ -659,7 +694,7 @@ button:hover::before {
 }
 
 .contact-container {
-    width: 30%;
+    width: 50%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -688,9 +723,38 @@ button:hover::before {
     flex-wrap: wrap; /* Permite que los botones se ajusten si no caben en una fila */
 }
 
-.ml3 {
-    font-weight: 900;
-    font-size: 3.5em;
+.ml11 {
+    font-weight: 700;
+    font-size: 4.3em;
+    
+  }
+  
+  .ml11 .text-wrapper {
+    position: relative;
+    display: inline-block;
+    padding-top: 0.1em;
+    padding-right: 0.05em;
+    padding-bottom: 0.15em;
+  }
+  
+  .ml11 .line {
+    opacity: 0;
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 3px;
+    background-color: #fff;
+    transform-origin: 0 50%;
+  }
+  
+  .ml11 .line1 { 
+    top: 0; 
+    left: 0;
+  }
+  
+  .ml11 .letter {
+    display: inline-block;
+    line-height: 1em;
   }
 
 /* -------------- FOOTERS -------------- */
