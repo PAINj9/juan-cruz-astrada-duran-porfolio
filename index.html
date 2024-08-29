@@ -26,52 +26,59 @@
     </header>
 
     <main>
-        <!-- Sección 1 -->
-        <section id="section-home" class="contenedor-1">
-            <div class="contenedor-contenido">
-                <div class="texto-introductorio">
-                    <h2>Hi! I'm</h2>
-                    <h1 class="rotating-text">
-                        <span class="current">Fullstack Developer</span>
-                    </h1>
-                    <p>My name is <b>Juan Cruz</b>, I'm 24 and I'm from Argentina.</p>
-                    <p>I live in Aarhus, Denmark, and I've been a video editor, programmer, and graphic designer for over 10 years. 
-                        <br>
-                        Throughout my life, I have embarked on several ventures, including hardware sales, consulting, and digital products. 
-                        <br>
-                        Currently, I am focused on enhancing my skills as a web developer.</p>
-                    <div class="botones-ordenados-inicio">
-                        <a href="https://www.youtube.com/@dondeestajuani" target="_blank" class="no-underline">
-                            <button class="boton-youtube">
-                                <img src="images/youtube.png" alt="YouTube" height="18" width="18">
-                                <span>YouTube</span>
-                            </button>
-                        </a>
-                        <a href="https://www.linkedin.com/in/juan-cruz-astrada-duran-7b5196219/" target="_blank" class="no-underline">
-                            <button class="boton-linkedin">
-                                <img src="images/linkedin.png" alt="LinkedIn" height="18" width="18">
-                                <span>LinkedIn</span>
-                            </button>
-                        </a>
-                        <a href="https://github.com/PAINj9" target="_blank" class="no-underline">
-                            <button class="boton-github">
-                                <img src="images/github.png" alt="GitHub" height="18" width="18">
-                                <span>GitHub</span>
-                            </button>
-                        </a>
-                        <a href="https://github.com/PAINj9" target="_blank" class="no-underline">
-                            <button class="boton-cv">
-                                <img src="images/curriculum-vitae.png" alt="CV" height="18" width="18">
-                                <span>CV</span>
-                            </button>
-                        </a>
+<!-- Sección 1 -->
+<section id="section-home" class="contenedor-1">
+    <div class="contenedor-contenido">
+        <div class="texto-introductorio">
+            <h2>Hi! I'm</h2>
+            <h1 class="rotating-text">
+                <span class="current">Fullstack Developer</span>
+            </h1>
+            <p>My name is <b>Juan Cruz</b>, I'm 24 and I'm from Argentina.</p>
+            <p>I live in Aarhus, Denmark, and I've been a video editor, programmer, and graphic designer for over 10 years. 
+                <br>
+                Throughout my life, I have embarked on several ventures, including hardware sales, consulting, and digital products. 
+                <br>
+                Currently, I am focused on enhancing my skills as a web developer.</p>
+            <div class="botones-ordenados-inicio">
+                <a href="https://www.youtube.com/@dondeestajuani" target="_blank" class="no-underline">
+                    <button class="boton-youtube">
+                        <img src="images/youtube.png" alt="YouTube" height="18" width="18">
+                        <span>YouTube</span>
+                    </button>
+                </a>
+                <a href="https://www.linkedin.com/in/juan-cruz-astrada-duran-7b5196219/" target="_blank" class="no-underline">
+                    <button class="boton-linkedin">
+                        <img src="images/linkedin.png" alt="LinkedIn" height="18" width="18">
+                        <span>LinkedIn</span>
+                    </button>
+                </a>
+                <a href="https://github.com/PAINj9" target="_blank" class="no-underline">
+                    <button class="boton-github">
+                        <img src="images/github.png" alt="GitHub" height="18" width="18">
+                        <span>GitHub</span>
+                    </button>
+                </a>
+
+                <!-- Dropdown for CV -->
+                <div class="dropdown">
+                    <button class="boton-cv">
+                        <img src="images/curriculum-vitae.png" alt="CV" height="18" width="18">
+                        <span>CV</span>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="files/AstradaVideoEditorCV.pdf" download="CV-Editor">Download CV as Editor</a>
+                        <a href="files/AstradaFullstackDeveloperCV.pdf" download="CV-Programmer">Download CV as Programmer</a>
                     </div>
                 </div>
-                <div class="imagen-principal">
-                    <img src="images/juani.JPEG" alt="Juan Cruz Astrada Duran">
-                </div>
+                <!-- Fin del Dropdown for CV -->
             </div>
-        </section>
+        </div>
+        <div class="imagen-principal">
+            <img src="images/juani.JPEG" alt="Juan Cruz Astrada Duran">
+        </div>
+    </div>
+</section>
 
         
 
@@ -395,12 +402,16 @@
                             <span>GitHub</span>
                         </button>
                     </a>
-                    <a href="https://github.com/PAINj9" target="_blank" class="no-underline">
+                    <div class="dropdown">
                         <button class="boton-cv">
                             <img src="images/curriculum-vitae.png" alt="CV" height="18" width="18">
                             <span>CV</span>
                         </button>
-                    </a>
+                        <div class="dropdown-content">
+                            <a href="files/AstradaVideoEditorCV.pdf" download="CV-Editor">Download CV as Editor</a>
+                            <a href="files/AstradaFullstackDeveloperCV.pdf" download="CV-Programmer">Download CV as Programmer</a>
+                        </div>
+                    </div>
                 </div>
 
             </div>
@@ -465,6 +476,7 @@
 
     </main>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
     <script src="js/carousel.js"></script>
     <script src="js/script.js"></script>

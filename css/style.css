@@ -83,6 +83,8 @@ nav {
 
 /* -------------- Section 1 -------------- */
 
+/* -------------- Section 1 Styles -------------- */
+
 .contenedor-1 {
     display: flex;
     justify-content: center;
@@ -103,6 +105,11 @@ nav {
     max-width: 1200px;
     color: #666666;
     margin: 20px 0;
+    flex-wrap: nowrap; /* Asegura que el contenido no se ajuste automáticamente */
+}
+
+.texto-introductorio {
+    max-width: 60%; /* Ajusta el ancho del texto para dejar espacio a la imagen */
 }
 
 .texto-introductorio h1 {
@@ -113,7 +120,6 @@ nav {
     position: relative;
     overflow: hidden;
     height: 1.2em;
-    margin-top: 40px;
 }
 
 .texto-introductorio h1 span {
@@ -135,7 +141,7 @@ nav {
 
 .texto-introductorio p {
     font-size: 1rem;
-    margin: 60px 0;
+    margin: 20px 0;
     line-height: 2; 
 }
 
@@ -161,7 +167,7 @@ nav {
     transform: scale(1.45);
 }
 
-
+/* Botones generales */
 button {
     background: transparent;
     position: relative;
@@ -207,18 +213,17 @@ button:hover::before {
     left: -50%;
 }
 
+/* Estilos específicos para botones */
 .boton-youtube { }
 
 .boton-github { }
 
 .boton-cv { }
 
-
-
 .botones-ordenados-inicio {
     display: flex;
     gap: 1rem; /* Espacio entre los botones */
-    justify-content: left; /* Centra los botones horizontalmente */
+    justify-content: flex-start; /* Alinea los botones a la izquierda */
     flex-wrap: wrap; /* Permite que los botones se ajusten si no caben en una fila */
 }
 
@@ -229,6 +234,47 @@ button:hover::before {
 .no-underline:hover {
     text-decoration: none;
 }
+
+/* Dropdown container */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown content */
+.dropdown-content {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    transform: translateY(-10px);
+    transition: visibility 0s, opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+/* Show the dropdown menu on hover with animation */
+.dropdown:hover .dropdown-content {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0s;
+}
+
 
 
 /* -------------- Section 2  -------------- */
