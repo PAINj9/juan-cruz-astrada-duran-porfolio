@@ -918,12 +918,25 @@ ul {
 /* ---------------------------- MEDIA QUERY MOVIL ---------------------------- */
 
 
-/* Media Query para iPhone 14 Pro Max */
-@media (max-width: 430px) {
+
+
+
+
+
+@media (max-width: 480px) {
+
+    /* ---------------------------- NAVBAR ---------------------------- */
+
     .navbar {
-        padding: 10px 10px; /* Reduce el padding en pantallas más pequeñas */
-        overflow: hidden;
-        height: 2rem;
+        padding: 10px; /* Reduce el padding en pantallas más pequeñas */
+        height: 2rem; /* Ajusta la altura de la navbar */
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%; /* Asegúrate de que la barra ocupe todo el ancho */
+        z-index: 1000; /* Asegura que la barra de navegación esté por encima del contenido */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra para dar un efecto de profundidad */
+        background-color: #fff; /* Asegúrate de que tenga un color de fondo visible */
     }
 
     .nav-links {
@@ -939,23 +952,16 @@ ul {
     .nav-links a {
         font-size: 14px; /* Tamaño de fuente adecuado para pantallas pequeñas */
     }
-}
 
+    /* ---------------------------- SECCION-1 ---------------------------- */
 
-
-
-
-
-
-
-@media (max-width: 480px) {
-    /* Sección 1 */
     .contenedor-1 {
         flex-direction: column; /* Organiza los elementos en columna */
-        height: auto; /* Permite que la altura se ajuste según el contenido */
-        padding: 10px;
-        padding-top: 50px; /* Añade espacio superior para compensar la navbar fija */
+        height: 100vh; /* Mantén la altura al 100% del viewport */
+        width: 100%;
         box-sizing: border-box;
+        overflow: hidden;
+        padding-top: 6rem; /* Compensa la altura de la navbar para que el contenido no quede oculto */
     }
 
     .contenedor-contenido {
@@ -1003,29 +1009,125 @@ ul {
     .texto-introductorio p {
         font-size: 0.9rem; /* Ajusta el tamaño de la fuente para móviles */
         line-height: 1.5; /* Ajusta la altura de línea para mejorar la legibilidad */
-        margin: 15px 0; /* Ajusta el margen superior e inferior */
     }
 
     .imagen-principal {
-        max-width: 80%; /* Reduce el tamaño de la imagen en móviles */
-        margin: 20px auto; /* Centra la imagen y añade espacio alrededor */
+        max-width: 70%; /* Reduce el tamaño de la imagen en móviles */
+        margin-top: 0;
     }
 
     .botones-ordenados-inicio {
         justify-content: center; /* Centra los botones horizontalmente */
         width: 100%; /* Ocupa todo el ancho disponible */
         flex-wrap: wrap; /* Permite que los botones se ajusten si no caben en una fila */
-        margin-bottom: 20px; /* Añade espacio debajo de los botones */
     }
 
-    .boton-youtube, .boton-github, .boton-cv {
-        margin-bottom: 10px; /* Añade un pequeño margen inferior para espaciado vertical */
-    }
 
     .dropdown-content {
         min-width: 100px; /* Reduce el ancho mínimo del dropdown para pantallas pequeñas */
         left: 50%; /* Centra el contenido dropdown */
         transform: translateX(-50%); /* Ajusta la posición centrada */
+    }
+}
+
+
+@media (max-width: 480px) {
+
+    /* -------------- Section 2  -------------- */
+    #section-skills {
+        height: auto; /* Ajusta la altura automáticamente al contenido */
+        padding: 20px; /* Añade padding para dar espacio en los bordes */
+        text-align: center; /* Centra el contenido para móviles */
+    }
+
+    .carousel1 {
+        flex-direction: column; /* Apila el contenido verticalmente */
+        width: 100%; /* Ocupa todo el ancho del contenedor */
+        height: auto; /* Ajusta la altura automáticamente */
+    }
+
+    .carousel1-container {
+        width: 100%;
+        padding: 10px; /* Reduce el padding para ajustarlo a pantallas pequeñas */
+    }
+
+    .carousel1-header h2 {
+        font-size: 20px; /* Reduce el tamaño de la fuente */
+    }
+
+    .carousel1-header p {
+        font-size: 14px; /* Reduce el tamaño de la fuente */
+    }
+
+    .carousel1-inner {
+        flex-direction: column; /* Apila el contenido verticalmente */
+        width: 100%; /* Asegúrate de que ocupe todo el ancho disponible */
+    }
+
+    .carousel1-item {
+        flex-direction: column; /* Alinea el contenido en una columna */
+        padding: 10px;
+    }
+
+    .carousel1-item img,
+    .carousel1-item video,
+    .carousel1-item iframe {
+        width: 100%; /* Ocupa todo el ancho disponible */
+        height: auto; /* Ajusta la altura automáticamente */
+        border-radius: 10px;
+        object-fit: cover; /* Asegura que el contenido se ajuste bien */
+    }
+
+    .carousel1-content {
+        padding: 10px;
+        width: 100%; /* Ocupa todo el ancho disponible */
+        text-align: center; /* Alinea el texto al centro */
+    }
+
+    .carousel1-content h2 {
+        font-size: 18px; /* Reduce el tamaño de la fuente */
+    }
+
+    .carousel1-content p {
+        font-size: 14px; /* Reduce el tamaño de la fuente */
+    }
+
+    .carousel1-nav {
+        display: none; /* Oculta la navegación en pantallas pequeñas para simplificar */
+    }
+
+    .carousel1-description p {
+        font-size: 14px; /* Reduce el tamaño de la fuente */
+    }
+
+    /* Ajustes para la cuadrícula de habilidades */
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas para mejor visualización en móvil */
+        grid-template-rows: repeat(auto-fit, auto); /* Ajusta las filas automáticamente */
+        width: 100%; /* Ocupa todo el ancho disponible */
+        height: auto; /* Ajusta la altura automáticamente */
+        gap: 20px; /* Añade espacio entre los íconos */
+    }
+
+    .skill-item {
+        width: 100%;
+        margin-bottom: 10px; /* Espacio inferior entre elementos */
+    }
+
+    .skill-item img {
+        width: 36px !important; /* Ajusta el tamaño de los íconos para pantallas pequeñas */
+        height: 36px !important;
+    }
+
+    .ml12 {
+        font-size: 1.2em; /* Reduce el tamaño de la fuente para móviles */
+        padding-left: 20px; /* Reduce el padding */
+    }
+}
+
+@media (max-width: 480px) {
+    .mobile-hide {
+        display: none !important; /* !important para asegurar que se aplique */
     }
 }
 
