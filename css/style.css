@@ -961,7 +961,6 @@ ul {
         width: 100%;
         box-sizing: border-box;
         overflow: hidden;
-        padding-top: 6rem; /* Compensa la altura de la navbar para que el contenido no quede oculto */
     }
 
     .contenedor-contenido {
@@ -970,7 +969,6 @@ ul {
         align-items: center; /* Centra el contenido */
         width: 100%;
         height: auto; /* Deja que el contenedor se ajuste al contenido */
-        margin: 0; /* Elimina el margen vertical */
     }
 
     .texto-introductorio {
@@ -1038,6 +1036,7 @@ ul {
         height: auto; /* Ajusta la altura automáticamente al contenido */
         padding: 20px; /* Añade padding para dar espacio en los bordes */
         text-align: center; /* Centra el contenido para móviles */
+        padding-top: 4rem;
     }
 
     .carousel1 {
@@ -1121,8 +1120,19 @@ ul {
 
     .ml12 {
         font-size: 1.2em; /* Reduce el tamaño de la fuente para móviles */
-        padding-left: 20px; /* Reduce el padding */
+        margin-left: -3.5rem;
+        
     }
+
+    h1.ml12 {
+        font-size: 1.2rem;
+        letter-spacing: 0.05em;
+        text-align: center; /* Asegura que esté centrado en la pantalla */
+        justify-content: center; /* Asegura que esté centrado en el eje horizontal */
+        
+    }
+
+    
 }
 
 @media (max-width: 480px) {
@@ -1131,3 +1141,114 @@ ul {
     }
 }
 
+
+/* -------------- Section 3  -------------- */
+
+
+@media (max-width: 480px) {
+
+    /* Contenedor del carrusel */
+    .carousel-container {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+    /* Ajuste del título del carrusel */
+    .carousel-header h2 {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 1.5rem;
+        text-align: center;
+        letter-spacing: 0.05em;
+        font-weight: 700;
+        color: #333;
+    }
+
+    .carousel-header hr {
+        width: 50px;
+        margin: 10px auto;
+        border: 2px solid #007BFF;
+    }
+
+    /* Estilos del carrusel */
+    .carousel {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        overflow: hidden;
+        overflow-x: hidden; /* Evita el desplazamiento horizontal */
+    }
+
+    .carousel-inner {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+    }
+
+    .carousel-item {
+        flex: 1 0 100%;
+        box-sizing: border-box;
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+
+    /* Contenido del proyecto */
+    .carousel-content {
+        text-align: center;
+        max-width: 100%;
+    }
+
+    .carousel-content h2 {
+        font-size: 1rem; /* Tamaño más pequeño para pantallas móviles */
+        color: #333;
+        margin-bottom: 10px;
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    .carousel-content p {
+        font-size: 0.85rem; /* Reducción del tamaño de la fuente en móviles */
+        line-height: 1.4;
+        color: #666;
+    }
+
+    /* Botones de navegación */
+    .carousel-nav button {
+        background: none;
+        border: none;
+        font-size: 1.5rem; /* Botones más pequeños en dispositivos móviles */
+        color: #007BFF;
+        cursor: pointer;
+        position: absolute;
+        top: 50%; /* Centra verticalmente los botones */
+        transform: translateY(-50%);
+        transition: color 0.3s ease;
+    }
+
+    .carousel-nav button:hover {
+        color: #0056b3;
+    }
+
+    .carousel-nav .prev {
+        left: 10px;
+    }
+
+    .carousel-nav .next {
+        right: 10px;
+    }
+
+    
+
+    h2.ml12 {
+        margin-left: -3rem;
+        font-size: 1.5rem;
+        letter-spacing: 0.05em;
+        text-align: center; /* Asegura que esté centrado en la pantalla */
+        justify-content: center; /* Asegura que esté centrado en el eje horizontal */
+    }
+}
