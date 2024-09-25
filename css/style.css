@@ -766,10 +766,9 @@ button:hover::before {
 }
 
 .botones-ordenados {
+    margin: auto;
     display: flex;
-    gap: 1rem; /* Espacio entre los botones */
     justify-content: center; /* Centra los botones horizontalmente */
-    flex-wrap: wrap; /* Permite que los botones se ajusten si no caben en una fila */
 }
 
 .ml11 {
@@ -1246,21 +1245,26 @@ ul {
     }
 
     /* Botones de navegación */
-    .carousel-nav button {
+    .carousel1-nav button {
         background: none;
         border: none;
-        font-size: 1.5rem;
-        color: #007BFF;
+        font-size: 24px;
         cursor: pointer;
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        transition: color 0.3s ease;
+        color: #666;
+        padding: 0 20px;
+        transition: color 0.3s;
     }
 
     .carousel-nav button:hover {
         color: #0056b3;
     }
+    
+
+
+
+
+
+
 
     .carousel-nav .prev {
         left: 10px;
