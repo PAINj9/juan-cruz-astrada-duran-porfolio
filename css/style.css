@@ -971,6 +971,7 @@ ul {
         width: 100%;
         box-sizing: border-box;
         overflow: hidden;
+        padding-top: 4rem;
     }
 
     .contenedor-contenido {
