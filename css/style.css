@@ -856,7 +856,7 @@ ul {
     background-color: rgb(40, 144, 241);
     height: 2px;
     box-sizing: border-box;
-    width: 50px;
+    width: 100px;
 }
 
 .footer-col ul li:not(:last-child) {
@@ -908,6 +908,17 @@ ul {
 @media (max-width: 574px) {
     .footer-col {
         width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer {
+        align-items: center;
+  text-align: left;
+    }
+    .footer-col {
+        width: 100vw;
+        padding-left: 3vh;
     }
 }
 
@@ -1146,20 +1157,22 @@ ul {
 
 
 @media (max-width: 480px) {
+    /* Ajustes para el contenedor del carrusel */
 
-    /* Contenedor del carrusel */
     .carousel-container {
         width: 100%;
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 20px;
+        max-width: 100%; /* Asegura que ocupe el ancho completo */
         box-sizing: border-box;
+        height: 100vh; /* Ocupa el 100% del viewport */
+        display: flex;
+        flex-direction: column;
+        justify-content: center; /* Centra el contenido verticalmente */
     }
 
-    /* Ajuste del título del carrusel */
+    /* Ajuste del título */
     .carousel-header h2 {
         font-family: 'Montserrat', sans-serif;
-        font-size: 1.5rem;
+        font-size: 1.3rem; /* Ajusta el tamaño del título para móviles */
         text-align: center;
         letter-spacing: 0.05em;
         font-weight: 700;
@@ -1179,53 +1192,68 @@ ul {
         align-items: center;
         position: relative;
         overflow: hidden;
-        overflow-x: hidden; /* Evita el desplazamiento horizontal */
+        width: 100%;
+        height: 70vh; /* Permite que el carrusel ajuste su altura */
+        
     }
 
     .carousel-inner {
         display: flex;
         transition: transform 0.5s ease-in-out;
+        width: 100%;
     }
 
     .carousel-item {
-        flex: 1 0 100%;
         box-sizing: border-box;
-        padding: 20px;
+        padding: 10px;
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
     }
 
-
-    /* Contenido del proyecto */
-    .carousel-content {
-        text-align: center;
-        max-width: 100%;
+    .carousel-item iframe {
+        width: 10%; /* Aumenta el ancho del video al 100% del contenedor */
+        height: 1vh; /* Aumenta la altura del video */
     }
 
+
+
+    .carousel-content {
+        text-align: center; /* Centra el contenido en móviles */
+        max-width: 90%; /* Aumenta el ancho del contenido del texto */
+        width: 100%; /* Asegura que ocupe todo el ancho del contenedor */
+        margin: 0 auto; /* Centra el contenido horizontalmente */
+        padding: 15px 0; /* Añade espacio vertical para separación */
+    }
+    
     .carousel-content h2 {
-        font-size: 1rem; /* Tamaño más pequeño para pantallas móviles */
+        font-size: 1.1rem; /* Aumenta un poco el tamaño del título */
         color: #333;
-        margin-bottom: 10px;
+        margin-bottom: 10px; /* Añade más espacio inferior al título */
         font-family: 'Montserrat', sans-serif;
     }
-
+    
     .carousel-content p {
-        font-size: 0.85rem; /* Reducción del tamaño de la fuente en móviles */
-        line-height: 1.4;
+        font-size: 0.9rem; /* Aumenta un poco el tamaño del texto para mejor legibilidad */
+        line-height: 1.6; /* Aumenta el espacio entre líneas para que sea más fácil de leer */
         color: #666;
+        margin: 0 0 15px 0; /* Añade un poco más de margen inferior para separar del título */
+        padding: 0 20px; /* Añade más padding lateral para evitar que el texto toque los bordes */
+        max-height: none; /* Asegura que no haya limitación de altura */
+        overflow: visible; /* Permite que el texto se muestre completamente */
+        text-align: justify; /* Justifica el texto para una apariencia más equilibrada */
     }
 
     /* Botones de navegación */
     .carousel-nav button {
         background: none;
         border: none;
-        font-size: 1.5rem; /* Botones más pequeños en dispositivos móviles */
+        font-size: 1.5rem;
         color: #007BFF;
         cursor: pointer;
         position: absolute;
-        top: 50%; /* Centra verticalmente los botones */
+        top: 50%;
         transform: translateY(-50%);
         transition: color 0.3s ease;
     }
@@ -1242,13 +1270,215 @@ ul {
         right: 10px;
     }
 
-    
-
     h2.ml12 {
         margin-left: -3rem;
         font-size: 1.5rem;
         letter-spacing: 0.05em;
-        text-align: center; /* Asegura que esté centrado en la pantalla */
-        justify-content: center; /* Asegura que esté centrado en el eje horizontal */
+        text-align: center;
     }
 }
+
+
+/* -------------- Section 4  -------------- */
+/* -------------- Section 4  -------------- */
+/* -------------- Section 4  -------------- */
+
+@media (max-width: 480px) {
+    #section-testimonials {
+        height: auto; /* Ajusta la altura automáticamente según el contenido */
+        padding: 20px; /* Añade algo de padding para evitar que el contenido toque los bordes */
+        max-width: 100%; /* Asegura que ocupe el ancho completo */
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start; /* Alinea el contenido al principio */
+        align-items: center;
+        text-align: center;
+    }
+
+    .testimonials-text {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 20px 0; /* Añade algo de espacio arriba y abajo */
+    }
+
+    .testimonials-container {
+        display: flex;
+        flex-direction: column; /* Cambia la dirección para que las tarjetas se apilen verticalmente */
+        align-items: center; /* Centra las tarjetas en móviles */
+        width: 100%;
+    }
+
+    /* Estilos ajustados para las tarjetas en móviles */
+    .new-card {
+        background-color: white;
+        width: 100%; /* Asegura que las tarjetas ocupen el ancho completo */
+        max-width: 320px; /* Limita el ancho máximo de las tarjetas para que no se estiren demasiado */
+        height: auto; /* Deja que la tarjeta ajuste su altura automáticamente */
+        margin: 15px 0; /* Espacio entre las tarjetas */
+        border-radius: 1.5rem;
+        box-shadow: 0px 1rem 1rem rgba(0, 0, 0, 0.2); /* Reduce un poco la sombra en móviles */
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .new-card:hover {
+        transform: translateY(-5px); /* Ajuste menor en el hover para móviles */
+        box-shadow: 0px 1.5rem 1.5rem rgba(0, 0, 0, 0.3);
+    }
+
+    .new-try, .new-lokomotion, .new-gonzo {
+        height: 10rem; /* Reduce la altura del contenedor de la imagen */
+    }
+
+    .new-try img, .new-lokomotion img, .new-gonzo img {
+        width: 7rem;
+        height: 7rem; /* Ajuste del tamaño de las imágenes para móviles */
+        transform: translateY(50%); /* Mantiene el efecto de hover */
+    }
+
+    .new-name {
+        text-align: center;
+        font-size: 1.2rem; /* Ajusta el tamaño del texto para móviles */
+        padding: 0.5rem;
+    }
+
+    .new-title {
+        font-size: 0.8rem; /* Tamaño menor para móviles */
+        padding-bottom: 0.8rem;
+        color: #afafaf;
+    }
+
+    .new-desc {
+        font-size: 0.9rem; /* Ajusta el tamaño de la descripción */
+        line-height: 1.5; /* Ajusta el espaciado del texto */
+        padding: 0 1.5rem 2rem; /* Ajuste de padding para mejor legibilidad */
+    }
+
+    .ml7 {
+        margin-top: 2rem; /* Ajuste de margen superior */
+        font-size: 2rem; /* Tamaño reducido para móviles */
+    }
+
+    .ml7 .text-wrapper {
+        display: block;
+        overflow: hidden;
+    }
+
+    .ml7 .letter {
+        line-height: 1em;
+    }
+}
+
+
+/* -------------- Section 5  -------------- */
+/* -------------- Section 5  -------------- */
+/* -------------- Section 5  -------------- */
+
+@media (max-width: 480px) {
+    #section-contact {
+        height: auto; /* Ajusta la altura automáticamente según el contenido */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 20px 10px; /* Mantiene un buen espacio alrededor */
+    }
+
+    .contact-titulo {
+        margin-bottom: 1rem; /* Reduce el espacio inferior del título */
+        width: 100%; /* Ocupa todo el ancho del contenedor */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .contact-container {
+        width: 100%; /* Aumenta el ancho del contenedor para móviles */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0 10px; /* Añade un padding lateral para evitar que el contenido toque los bordes */
+    }
+
+    .textos-contact {
+        margin-bottom: 1rem; /* Reduce el margen inferior */
+        width: 100%; /* Ocupa todo el ancho disponible */
+    }
+
+    .textos-contact h2 {
+        font-size: 2rem; /* Reduce el tamaño del título para móviles */
+        margin-bottom: 10px; /* Añade un poco de margen inferior */
+    }
+
+    .textos-contact h4 {
+        font-size: 1rem; /* Ajusta el tamaño del subtítulo */
+        width: 100%;
+        margin-bottom: 0.8rem; /* Añade un pequeño margen inferior */
+    }
+
+    /* Botones ordenados en una fila de 4 */
+    .botones-ordenados {
+        display: flex;
+        justify-content: space-between; /* Distribuye los botones equitativamente */
+        width: 100%; /* Asegura que ocupe todo el ancho del contenedor */
+        padding: 15px 0; /* Añade un poco de padding vertical */
+        gap: 10px; /* Espacio uniforme entre los botones */
+    }
+
+    .botones-ordenados button {
+        width: 120px; /* Asigna el mismo ancho a cada botón */
+        padding: 10px;
+        font-size: 1rem; /* Ajusta el tamaño del texto */
+        height: 50px; /* Mantiene la misma altura para todos los botones */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        box-sizing: border-box; /* Asegura que el padding no desborde el tamaño */
+    }
+
+    /* Ajuste de texto animado */
+    .ml11 {
+        font-weight: 700;
+        font-size: 1.8rem; /* Reduce el tamaño de la fuente para móviles */
+        line-height: 1.2;
+        word-break: break-word;
+    }
+
+    .ml11 .text-wrapper {
+        padding-top: 0.1em;
+        padding-right: 0.05em;
+        padding-bottom: 0.15em;
+    }
+
+    .ml11 .line {
+        opacity: 0;
+        position: absolute;
+        left: 0;
+        height: 100%;
+        width: 3px;
+        background-color: #fff;
+        transform-origin: 0 50%;
+    }
+
+    .ml11 .line1 { 
+        top: 0; 
+        left: 0;
+    }
+
+    .ml11 .letter {
+        display: inline-block;
+        line-height: 1em;
+    }
+}
+
+
+
+
+
+
