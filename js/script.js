@@ -179,5 +179,14 @@ function prevSkillSlide() {
 showSkillSlides();
 
 
+// Cambiar entre modo claro y oscuro al usar el interruptor
+const themeToggle = document.getElementById('theme-toggle');
 
+themeToggle.addEventListener('change', function() {
+    if (this.checked) {
+        document.body.classList.add('dark-mode');
+    } else {
+        document.body.classList.remove('dark-mode');
+    }
+});
 

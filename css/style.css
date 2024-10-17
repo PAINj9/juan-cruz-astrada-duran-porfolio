@@ -76,6 +76,59 @@ nav {
     font-weight: 600;
 }
 
+/* Estilo del interruptor */
+.toggle-switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 25px;
+}
+
+.switch-label .checkbox {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.switch-label .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 34px;
+}
+
+.switch-label .slider:before {
+    position: absolute;
+    content: "";
+    height: 19px;
+    width: 19px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+/* Estado activado (modo oscuro) */
+.checkbox:checked + .slider {
+    background-color: #2196F3;
+}
+
+.checkbox:checked + .slider:before {
+    transform: translateX(24px);
+}
+
+/* Estilos para el modo oscuro */
+body.dark-mode {
+    background-color: #1e1e1e;
+    color: #f1f1f1;
+}
+
 
 
 /* -------------- Section 1 -------------- */
@@ -154,6 +207,8 @@ nav {
     border-radius: 6%;
     margin: 40px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra alrededor de la imagen */
+
+
 }
 
 .imagen-principal img {
@@ -162,6 +217,8 @@ nav {
     transform-origin: 83%;
     transform: scale(1.35);
     transition: transform 0.3s ease;
+    object-fit: cover; /* Ajusta la imagen sin deformarla */
+    image-rendering: auto; /* Asegura que el navegador escale bien la imagen */
 }
 
 .imagen-principal img:hover {
@@ -434,14 +491,19 @@ button:hover::before {
 }
 
 
-.ml12 {
+
+
+  .ml12 {
     width: 100%;
     padding-left: 60px;
-    font-weight: 250;
     font-size: 1.5em;
+    white-space: nowrap; /* Evita que el texto se divida en varias líneas */
+    text-align: center;  /* Asegura que el texto esté centrado */
+    font-weight: 200;
     text-transform: uppercase;
-    letter-spacing: 0.51em;
-  }
+    letter-spacing: 0.2em; /* Ajusta el espaciado de letras para mejorar la visibilidad */
+    margin: 0 auto; /* Asegura que esté centrado dentro del contenedor */
+}
   
   .ml12 .letter {
     display: inline-block;
@@ -766,6 +828,7 @@ button:hover::before {
 }
 
 .botones-ordenados {
+    gap: 1rem;
     margin: auto;
     display: flex;
     justify-content: center; /* Centra los botones horizontalmente */
@@ -774,6 +837,7 @@ button:hover::before {
 .ml11 {
     font-weight: 700;
     font-size: 4.3em;
+    white-space: nowrap;
     
   }
   
@@ -801,8 +865,13 @@ button:hover::before {
   }
   
   .ml11 .letter {
-    display: inline-block;
-    line-height: 1em;
+    
+        line-height: 1em;
+        white-space: nowrap; /* Evita que el texto se divida en varias líneas */
+        text-align: center;   /* Centra el texto */
+        display: inline-block;
+        margin: 0 auto; /* Asegura que esté centrado */
+    
   }
 
 /* -------------- FOOTERS -------------- */
@@ -920,6 +989,109 @@ ul {
         padding-left: 3vh;
     }
 }
+
+/* MODO OSCURO */
+
+/* Estilo general para el modo oscuro */
+body.dark-mode {
+    background-color: #1e1e1e; /* Fondo oscuro */
+    color: #f1f1f1; /* Texto claro */
+    transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+/* Navbar en modo oscuro */
+body.dark-mode .navbar {
+    background-color: rgba(30, 30, 30, 0.8); /* Navbar más oscura */
+    color: #f1f1f1; /* Texto claro en la navbar */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Añade un borde ligero */
+}
+
+/* Links en la navbar en modo oscuro */
+body.dark-mode .nav-links a {
+    color: #f1f1f1; /* Color de texto claro en los enlaces */
+}
+
+body.dark-mode .nav-links a:hover {
+    color: #1db954; /* Cambia el hover a un verde claro */
+}
+
+/* Fondo de la sección contenedora */
+body.dark-mode .contenedor-1 {
+    background-color: #2c2c2c; /* Fondo más oscuro para las secciones */
+}
+
+body.dark-mode .contenedor-2,
+body.dark-mode .contenedor-3,
+body.dark-mode .contenedor-4,
+body.dark-mode .contenedor-5 {
+    background-color: #2c2c2c; /* Aplica fondo oscuro para todas las secciones */
+}
+
+/* Cambios en los textos */
+body.dark-mode h1, 
+body.dark-mode h2, 
+body.dark-mode p {
+    color: #f1f1f1; /* Texto claro */
+    transition: color 0.4s ease;
+}
+
+/* Imágenes con un filtro ligero en modo oscuro */
+body.dark-mode img {
+    filter: brightness(0.9); /* Reduce el brillo de las imágenes */
+}
+
+/* Estilo del footer en modo oscuro */
+body.dark-mode .footer {
+    background-color: #333; /* Fondo del footer más oscuro */
+}
+
+body.dark-mode .footer-col h4::before {
+    background-color: #1db954; /* Cambia el borde a verde */
+}
+
+/* Botones en modo oscuro */
+body.dark-mode button {
+    color: #f1f1f1; /* Texto claro */
+    border: 1px solid #c2d4c8; /* Bordes verdes */
+}
+
+/* Estilos para el modo oscuro */
+body.dark-mode .new-card {
+    background-color: #2e2e2e; /* Fondo de la tarjeta más oscuro */
+    color: #f1f1f1; /* Texto más claro */
+}
+
+body.dark-mode .new-name,
+body.dark-mode .new-title,
+body.dark-mode .new-desc {
+    color: #ffffff; /* Color del texto claro para mejor contraste */
+}
+
+body.dark-mode .new-card:hover {
+    box-shadow: 0px 2rem 2rem rgba(255, 255, 255, 0.1); /* Sombra más ligera al hacer hover */
+}
+
+/* Mejora de la legibilidad del texto */
+.new-desc {
+    color: #666666; /* Texto ligeramente más oscuro en modo claro */
+}
+
+body.dark-mode .new-desc {
+    color: #e0e0e0; /* Texto más claro para modo oscuro */
+}
+
+
+/* Dropdown en modo oscuro */
+body.dark-mode .dropdown-content {
+    background-color: #d6d6d6; /* Fondo más oscuro */
+    color: #f1f1f1; /* Texto claro */
+}
+
+
+body.dark-mode .toggle-switch .slider:before {
+    background-color: #fff; /* Botón blanco */
+}
+
 
 
 /* ---------------------------- MEDIA QUERY MOVIL ---------------------------- */
