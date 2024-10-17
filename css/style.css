@@ -1628,7 +1628,7 @@ body.dark-mode .toggle-switch .slider:before {
 
 
 /* ---------------------------- iPhone 15 Pro (hasta 1179px) ---------------------------- */
-@media only screen and (max-width: 1179px) {
+@media (max-width: 430px) {
 
     /* Ajustes Generales */
     body {
@@ -2101,5 +2101,3 @@ body.dark-mode .toggle-switch .slider:before {
         display: block;
         overflow: hidden;
     }
-
-    .ml7
