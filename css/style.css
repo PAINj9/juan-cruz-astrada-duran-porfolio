@@ -1627,3 +1627,108 @@ body.dark-mode .toggle-switch .slider:before {
 
 
 
+/* ---------------------------- iPhone 15 Pro (hasta 1179px) ---------------------------- */
+@media only screen and (max-width: 1179px) {
+
+    /* Ajustes Generales */
+    body {
+        font-size: 16px; /* Aumenta ligeramente el tamaño de fuente */
+        padding: 0 15px; /* Reduce el padding lateral */
+    }
+
+    /* Ajustes Navbar */
+    .navbar {
+        height: 70px; /* Ajusta la altura de la barra de navegación */
+        padding: 15px; /* Padding adicional */
+    }
+
+    .nav-links {
+        flex-direction: row;
+        justify-content: space-around;
+        font-size: 14px; /* Tamaño de fuente más pequeño */
+    }
+
+    /* Ajustes Sección de Introducción */
+    .contenedor-1 {
+        flex-direction: column; /* Organiza los elementos en columna */
+        padding: 20px;
+        align-items: center;
+        height: auto; /* Ajusta la altura automáticamente */
+    }
+
+    .texto-introductorio {
+        text-align: center; /* Centra el texto */
+        max-width: 90%; /* Asegura que no se desborde en pantallas más pequeñas */
+    }
+
+    .texto-introductorio h1 {
+        font-size: 2.2rem; /* Ajusta el tamaño del título */
+    }
+
+    .texto-introductorio p {
+        font-size: 1rem; /* Ajusta el tamaño del texto */
+    }
+
+    .imagen-principal {
+        max-width: 80%; /* Ajusta el tamaño de la imagen */
+        margin-top: 20px;
+    }
+
+    .botones-ordenados-inicio {
+        flex-wrap: wrap; /* Permite que los botones se ajusten */
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    /* Ajustes en la Sección Skills */
+    .skills-grid {
+        grid-template-columns: repeat(3, 1fr); /* Cambia a 3 columnas en la cuadrícula */
+        grid-gap: 15px; /* Espacio entre los íconos */
+    }
+
+    .skill-item img {
+        width: 40px;
+        height: 40px; /* Ajusta el tamaño de los íconos */
+    }
+
+    /* Ajustes en la Sección Proyectos */
+    .carousel-container {
+        height: auto; /* Ajusta la altura automáticamente */
+        padding: 20px;
+    }
+
+    .carousel-item iframe {
+        width: 100%; /* Ancho completo para los videos */
+        height: auto;
+    }
+
+    .carousel-content {
+        max-width: 80%; /* Ajusta el ancho del contenido */
+    }
+
+    /* Ajustes en la Sección Testimonios */
+    .new-card {
+        max-width: 350px; /* Limita el ancho máximo de las tarjetas */
+        margin: 20px 0; /* Añade un margen entre tarjetas */
+    }
+
+    /* Ajustes en la Sección Contacto */
+    .botones-ordenados {
+        flex-wrap: wrap; /* Permite que los botones se ajusten */
+        gap: 15px; /* Añade un espacio entre los botones */
+        justify-content: center;
+    }
+    
+    .textos-contact {
+        margin-bottom: 1rem;
+        text-align: center; /* Centra el contenido */
+    }
+
+    .textos-contact h2 {
+        font-size: 2rem;
+    }
+
+    .textos-contact h4 {
+        font-size: 1rem;
+    }
+}
